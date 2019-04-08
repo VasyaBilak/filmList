@@ -22,13 +22,34 @@ async function updateFilms() {
  
   return `
     <div class="list">
-      
+
       <ul> 
-      <a a href="#" data-target="${list.name}" class="nav-link">
-      <li>${list.name}</li>
-      </a>
+        <a href="#" data-target="${list.name}" class="nav-link">
+           <li>${list.name}</li>
+        </a>
       </ul>         
       
     </div>
   `
 }
+
+// // Search don't work 
+// const list = document.querySelector('.list ul'),  //null
+//       btn = document.querySelector('btn'),
+//       searchBar = document.forms['search'].querySelector('input')
+
+// searchBar.addEventListener('keyup', e => {
+
+//   const val = e.target.value.toLowerCase(),
+//         li = list.getElementsByTagName('li')
+
+//   Array.from(li).forEach(filmName => {
+//     const title = filmName.firstElementChild.textContent
+
+//     if(title.toLowerCase().indexOf(val) != -1) {
+//       filmName.style.display = 'block'
+//     } else {
+//       filmName.style.display = 'none'
+//     }
+//   })
+// })
