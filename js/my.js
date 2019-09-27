@@ -10,14 +10,14 @@ async function updateFilms() {
 
     filmsList.innerHTML = ''
 
-    const response = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=${key}`),
+    const response = await fetch(`https://codesandbox.io/embed/2ox49w516p${key}`),
           json = await response.json()
 
     filmsList.innerHTML = json.production_companies.map(createList).join('\n')
 
   }
 
-
+  
   const createList = (list) => {
  
   return `
